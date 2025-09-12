@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.container {
+  height: 100%;
+  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}

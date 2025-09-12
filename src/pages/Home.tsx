@@ -54,11 +54,11 @@ export default function TopSwiper() {
         ))}
       </Swiper>
 
-      <div className="grid grid-cols-2 gap-[40px] p-[40px]">
+      <div className="grid grid-cols-2 gap-[40px] p-[40px] container">
         <div className="text-white border border-white rounded-2xl bg-gray-900/60 h-[200px] mt-[30px] p-[20px] text-5xl italic font-mono">
           Start your work now!
         </div>
-        <div className="text-white border border-white  bg-gray-900/60 h-[200px] mt-[30px] p-[70px]">
+        <div className="text-white border border-white rounded-2xl  bg-gray-900/60 h-[200px] mt-[30px] p-[70px]">
           <button
             className="w-full h-full rounded-full text-3xl 
              bg-blue-600 text-white font-semibold 

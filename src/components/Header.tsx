@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <header className="w-full bg-black text-white shadow-md">
+    <header className="z-50  bg-black text-white shadow-md">
       <div className="container mx-auto flex items-center justify-between px-6 py-3">
         <p
           onClick={() => navigate("/")}

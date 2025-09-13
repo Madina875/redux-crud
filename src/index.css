@@ -2,7 +2,15 @@
 
 .container {
   height: 100%;
-  width: 1280px;
+  max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

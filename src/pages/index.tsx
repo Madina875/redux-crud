@@ -1,9 +1,9 @@
 import { memo } from "react";
 import { Route, Routes } from "react-router";
 import MainLayout from "./layout";
-import Home from "./Home";
-import Add from "./Add";
-import Cars from "./Cars";
+import Add from "./add/Add";
+import Cars from "./cars/Cars";
+import Home from "./home/Home";
 
 const AppRouter = () => {
   return (

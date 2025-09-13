@@ -4,14 +4,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 // @ts-ignore
 import "swiper/css/pagination";
+import img1 from "../../assets/clipboard-image-1757680854.png";
+import img2 from "../../assets/clipboard-image-1757680909.png";
+import img3 from "../../assets/clipboard-image-1757690337.png";
+import img4 from "../../assets/clipboard-image-1757680989.png";
+import img5 from "../../assets/clipboard-image-1757681024.png";
+import { useNavigate } from "react-router-dom";
 
-import img1 from "../assets/clipboard-image-1757680854.png";
-import img2 from "../assets/clipboard-image-1757680909.png";
-import img3 from "../assets/clipboard-image-1757690337.png";
-import img4 from "../assets/clipboard-image-1757680989.png";
-import img5 from "../assets/clipboard-image-1757681024.png";
-
-export default function TopSwiper() {
+export default function Home() {
+  const navigate = useNavigate();
   const slides = [
     { img: img1, text: "Create Your Car" },
     { img: img2, text: "Add Your Car" },
@@ -60,6 +61,7 @@ export default function TopSwiper() {
         </div>
         <div className="text-white border border-white rounded-2xl  bg-gray-900/60 h-[200px] mt-[30px] p-[70px]">
           <button
+            onClick={() => navigate("/add")}
             className="w-full h-full rounded-full text-3xl 
              bg-blue-600 text-white font-semibold 
              hover:bg-blue-900 active:scale-95 

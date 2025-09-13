@@ -8,11 +8,6 @@ export const store = configureStore({
     counter,
     greeting,
     data,
-    // likes,
-    // cart,
-    // auth,
-    // token,
-    // user,
   },
 });
 

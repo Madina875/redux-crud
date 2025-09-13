@@ -1,17 +1,18 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
-export interface IItem {
+export interface ICar {
   id: number;
   name: string;
-  message: string;
+  price: number;
+  color: string;
 }
 
 interface IData {
-  value: IItem[];
-  edittingItem: null | IItem;
+  value: ICar[];
+  edittingItem: null | ICar;
 }
 
-const jsonData = localStorage.getItem("data");
+const jsonData = localStorage.getItem("cardata");
 
 const initialState: IData = {
   value: jsonData ? JSON.parse(jsonData) : [],
@@ -19,26 +20,26 @@ const initialState: IData = {
 };
 
 export const dataSlice = createSlice({
-  name: "data",
+  name: "cardata",
   initialState,
   reducers: {
-    add: (state, action: PayloadAction<IItem>) => {
+    add: (state, action: PayloadAction<ICar>) => {
       state.value.push(action.payload);
-      localStorage.setItem("data", JSON.stringify(state.value));
+      localStorage.setItem("cardata", JSON.stringify(state.value));
     },
     remove: (state, action: PayloadAction<number>) => {
       state.value = state.value.filter((item) => item.id !== action.payload);
-      localStorage.setItem("data", JSON.stringify(state.value));
+      localStorage.setItem("cardata", JSON.stringify(state.value));
     },
-    setEdittingItem: (state, action: PayloadAction<IItem>) => {
+    setEdittingItem: (state, action: PayloadAction<ICar>) => {
       state.edittingItem = action.payload;
     },
-    update: (state, action: PayloadAction<IItem>) => {
+    update: (state, action: PayloadAction<ICar>) => {
       state.value = state.value.map((item) =>
         item.id === action.payload.id ? action.payload : item
       );
       state.edittingItem = null;
-      localStorage.setItem("data", JSON.stringify(state.value));
+      localStorage.setItem("cardata", JSON.stringify(state.value));
     },
     cancel: (state, action: PayloadAction<"">) => {
       action.payload = "";
